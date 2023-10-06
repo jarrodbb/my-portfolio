@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./pages/ErrorPage.jsx";
 import AboutMePage from "./pages/AboutMePage";
 import PortfolioPage from "./pages/PortfolioPage";
 import ContactPage from "./pages/ContactPage";
