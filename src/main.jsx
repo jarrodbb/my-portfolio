@@ -8,6 +8,7 @@ import ResumePage from "./pages/ResumePage";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
 
 const router = createBrowserRouter([
   {
