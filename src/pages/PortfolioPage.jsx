@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import Projects from "../components/UI/ProjectSections/ProjectDisplay";
+import ListItem from "../components/UI/ListItem";
+
 const project = [
   {
     id: 1,
@@ -35,9 +39,19 @@ const project = [
 ];
 
 export default function PortfolioPage() {
+  const [projects, setProjects] = useState([]);
+
+  setProjects(project);
+
   return (
-    <div>
-      <h1>My Portfolio</h1>
+    <div className="container pt-4">
+      <ul className="list-group list-group">
+        {users.map((user) => (
+          <ListItem key={user.id}>
+            <Projects user={user} />
+          </ListItem>
+        ))}
+      </ul>
     </div>
   );
 }
