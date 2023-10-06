@@ -8,56 +8,42 @@ export default function ContactPage() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [submission, setSubmission] = useState("");
 
   const handleInputChange = (e) => {
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
-    // return inputType === 'name' ? setName(inputValue)
-
-    if (inputValue === "") {
-      setErrorMessage(inputType + " test");
-      return;
-    }
-
     if (inputType === "email") {
-      setEmail(inputValue);
+      if (inputValue === "") {
+        return setErrorMessage("cannot be empty");
+      } else {
+        setEmail(inputValue);
+      }
     }
     if (inputType === "name") {
-      setName(inputValue);
+      if (inputValue === "") {
+        return setErrorMessage("Please include your name"), setName("");
+      } else {
+        setName(inputValue);
+      }
     }
-
     if (inputType === "message") {
-      setMessage(inputValue);
+      if (inputValue === "") {
+        return (
+          setErrorMessage("Please include a message, thanks"), setMessage("")
+        );
+      } else {
+        setMessage(inputValue);
+      }
     }
-
-    //   if (inputType === "email" ) {
-    //     if (inputValue === "") {
-    //       setErrorMessage("cannot be empty");
-    //     } else {
-    //       setEmail(inputValue);
-    //     }
-    //   }
-    //   if (inputType === "name") {
-    //     if (inputValue === "") {
-    //       setErrorMessage("cannot be empty");
-    //     } else {
-    //       setName(inputValue);
-    //     }
-    //   }
-    //   if (inputValue === "message") {
-    //     if (inputValue === "") {
-    //       setErrorMessage("cannot be empty")
-    //   } else {
-    //     setMessage(inputValue);
-    //   }
-    // }
-
-    // setErrorMessage("");
+    setErrorMessage("");
+    setSubmission("");
   };
 
   const handleFormSubmit = (e) => {
+    //add use effect to alert name
     e.preventDefault();
 
     if (!validateEmail(email)) {
@@ -65,7 +51,9 @@ export default function ContactPage() {
       return;
     }
 
-    alert(`Thanks for your email ${name}. I'll be intouch :)`);
+    setSubmission(`Thanks for your email ${name}. I'll be intouch :)`);
+
+    // alert(`Thanks for your email ${name}. I'll be intouch :)`);
 
     setName("");
     setMessage("");
@@ -75,6 +63,8 @@ export default function ContactPage() {
 
   return (
     <div className="container text-center">
+      <h3>{submission}</h3>
+
       <form className="form" onSubmit={handleFormSubmit}>
         <input
           value={name}
@@ -91,6 +81,7 @@ export default function ContactPage() {
           onChange={handleInputChange}
           type="email"
           placeholder="email"
+          required
         />
 
         <input
@@ -99,6 +90,7 @@ export default function ContactPage() {
           onChange={handleInputChange}
           type="text"
           placeholder="message"
+          required
         />
         <button type="submit">Submit</button>
       </form>
