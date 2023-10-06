@@ -5,7 +5,7 @@ export default function ProfileDetailed({ project }) {
     <div className="card">
       <CardBody
         name={project.name}
-        desctiption={project.address}
+        description={project.description}
         github={project.github}
         deployedLink={project.deployedLink}
         projectImage={project.projectImage}
