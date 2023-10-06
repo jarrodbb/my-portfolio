@@ -34,7 +34,7 @@ const project = [
     github: "https://github.com/jarrodbb/Note-Taker",
     deployedLink:
       "https://organise-your-life-note-taker-5a8022c9039c.herokuapp.com/",
-    image: "",
+    projectImage: "",
   },
 ];
 
@@ -46,9 +46,9 @@ export default function PortfolioPage() {
   return (
     <div className="container pt-4">
       <ul className="list-group list-group">
-        {users.map((user) => (
-          <ListItem key={user.id}>
-            <Projects user={user} />
+        {projects.map((project) => (
+          <ListItem key={project.id}>
+            <Projects project={project} />
           </ListItem>
         ))}
       </ul>

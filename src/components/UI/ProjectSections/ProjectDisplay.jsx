@@ -1,9 +1,15 @@
 import CardBody from "../Card/CardBody";
 
-export default function ProfileDetailed({ user }) {
+export default function ProfileDetailed({ project }) {
   return (
     <div className="card">
-      <CardBody company={user.company} address={user.address} />
+      <CardBody
+        name={project.name}
+        desctiption={project.address}
+        github={project.github}
+        deployedLink={project.deployedLink}
+        projectImage={project.projectImage}
+      />
     </div>
   );
 }
