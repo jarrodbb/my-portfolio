@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import Projects from "../components/UI/ProjectSections/ProjectDisplay";
 import ListItem from "../components/UI/ListItem";
 import sickieImg from "../assets/images/sickie.png";
-import techImg from "../assets/images/tech-bg.png";
+import techImg from "../assets/images/tech-blog.png";
 import textImg from "../assets/images/PWA.png";
 import noteImg from "../assets/images/note-taker.png";
+import movieImg from "../assets/images/movie.png";
+import weatherImg from "../assets/images/weather.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const projects = [
@@ -48,7 +50,7 @@ const projects = [
     description: "API to fetch weather information",
     github: "https://github.com/jarrodbb/weather-dashboard",
     deployedLink: "https://jarrodbb.github.io/weather-dashboard/",
-    projectImage: "",
+    projectImage: weatherImg,
   },
   {
     id: 6,
@@ -56,7 +58,7 @@ const projects = [
     description: "API to fetch movies",
     github: "https://github.com/jarrodbb/Movie-buff",
     deployedLink: "https://bemonn.github.io/Movie-buff/",
-    projectImage: "",
+    projectImage: movieImg,
   },
 ];
 

@@ -10,7 +10,7 @@ export default function ProfileDetailed({ project }) {
         <CardHeader name={project.name} deployedLink={project.deployedLink} github={project.github} />
         <CardBody
           description={project.description}
-          
+          deployedLink={project.deployedLink}
           projectImage={project.projectImage}
         />
       </div>
