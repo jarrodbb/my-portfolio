@@ -1,0 +1,20 @@
+.about-me-background {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  background-color: #f4eea9;
+}
+
+.title-boarder {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #cf8cdf;
+  width: 36%;
+  padding: 32px;
+  margin: 16px;
+}
+
+.contact-bg {
+  background-color: #cab6cd;
+}

@@ -1,0 +1,21 @@
+.display-resume {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fdc5f5;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 32px;
+  margin: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+.button-style {
+  background-color: #919098;
+}
+
+.button-style:hover {
+  background-color: #897c80;
+}

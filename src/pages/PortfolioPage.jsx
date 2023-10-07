@@ -66,7 +66,9 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <h1>Portfolio</h1>
+      <div className="title-boarder rounded-circle">
+      <h1 >Portfolio</h1>
+      </div>
       
         <div className="container p-3 justify-content-center" style={{height: "100%"}}>
           <div className="row ">

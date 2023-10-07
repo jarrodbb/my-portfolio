@@ -88,56 +88,62 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="App">
-      <h3>{submission}</h3>
+    <div>
+      <div className="title-boarder rounded-circle">
+        <h1>Contact Me</h1>
+      </div>
+      <div className="App">
+        <h3>{submission}</h3>
 
-      <Form onSubmit={handleFormSubmit}>
-        <Form.Field
-          id="form-input-control-last-name"
-          value={name}
-          name="name"
-          control={Input}
-          onChange={handleInputChange}
-          label="Name"
-          type="text"
-          placeholder="Name..."
-          required
-          icon="user circle"
-          iconPosition="left"
-        />
+        <Form className="contact-bg" onSubmit={handleFormSubmit}>
+          <Form.Field
+            id="form-input-control-last-name"
+            value={name}
+            name="name"
+            control={Input}
+            onChange={handleInputChange}
+            label="Name"
+            type="text"
+            placeholder="Name..."
+            required
+            icon="user circle"
+            iconPosition="left"
+          />
 
-        <Form.Field
-          id="form-input-control-email"
-          value={email}
-          control={Input}
-          name="email"
-          label="Email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-          required
-          icon="mail"
-          iconPosition="left"
-        />
+          <Form.Field
+            id="form-input-control-email"
+            value={email}
+            control={Input}
+            name="email"
+            label="Email"
+            onChange={handleInputChange}
+            type="email"
+            placeholder="email"
+            required
+            icon="mail"
+            iconPosition="left"
+          />
 
-        <Form.Field
-          id="form-textarea-control-opinion"
-          value={message}
-          control={Input}
-          name="message"
-          label="Message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="message"
-          required
-        />
-        <button type="submit">Submit</button>
-      </Form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
+          <Form.Field
+            id="form-textarea-control-opinion "
+            rows="5"
+            value={message}
+            control={Input}
+            name="message"
+            label="Message"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="message"
+            required
+          />
+          <button type="submit">Submit</button>
+        </Form>
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

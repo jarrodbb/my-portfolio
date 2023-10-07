@@ -1,0 +1,43 @@
+/* .red .active,
+.red .active a:hover {
+    background-color: red;
+} */
+
+.test-font { 
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav-pills > li > a.active {
+  background-color: #f4cbc6 !important;
+  color: blue !important;
+  font-size: larger;
+  font-weight: 300;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav-pills > li > a:hover {
+  color: black !important;
+  font-weight: 300;
+}
+
+.nav-link-color {
+  color: black;
+}
+
+ul {
+  font-size: larger;
+}
+
+@media screen and (max-width: 559px) {
+  .nav-pills > li > a.active {
+    background-color: #f4cbc6 !important;
+    color: black !important;
+    font-size: smaller;
+    font-weight: 300;
+  }
+  ul {
+    font-size: 11px;
+  }
+}
+
+
