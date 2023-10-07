@@ -133,11 +133,12 @@ export default function ContactPage() {
             label="Message"
             onChange={handleInputChange}
             type="text"
-            
             placeholder="message"
             required
           />
-          <button type="submit">Submit</button>
+          <button className="submit-button" type="submit ">
+            Submit
+          </button>
         </Form>
         {errorMessage && (
           <div>

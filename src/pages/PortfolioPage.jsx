@@ -38,7 +38,7 @@ const projects = [
   {
     id: 4,
     name: "Note Taker",
-    description: "UPDATE",
+    description: "Express.js",
     github: "https://github.com/jarrodbb/Note-Taker",
     deployedLink:
       "https://organise-your-life-note-taker-5a8022c9039c.herokuapp.com/",
