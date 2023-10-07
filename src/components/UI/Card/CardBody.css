@@ -1,4 +1,5 @@
 .box-image {
   background-size: contain;
-  height: 200px;
+  height: 350px;
+  border-radius: 0px 0px 32px 32px;
 }
