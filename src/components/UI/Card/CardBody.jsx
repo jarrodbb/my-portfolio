@@ -1,4 +1,4 @@
-// import CardContent from "./CardContent";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CardBody.css";
 export default function CardBody({ description, deployedLink, projectImage }) {
