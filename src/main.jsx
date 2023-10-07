@@ -9,6 +9,12 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container } from "semantic-ui-react";
+
+
+
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const router = createBrowserRouter([
   {

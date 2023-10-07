@@ -61,38 +61,40 @@ const projects = [
 
 export default function PortfolioPage() {
   // const [projects, setProjects] = useState([]);
-
-  // setProjects(project);
-
   return (
     <>
-      <div className="title-boarder rounded-circle">
-      <h1 >Portfolio</h1>
+      <h1>Portfolio</h1>
+     <Container>
+        <ul className="list-group list-group">
+          {projects.map((project) => (
+            <ListItem key={project.id}>
+              <Projects project={project} />
+              </Container>
+          ))}
+        </ul>
       </div>
-      
-        <div className="container p-3 justify-content-center" style={{height: "100%"}}>
-          <div className="row ">
-            {projects.map((project) => (
-              <Projects key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-      
     </>
   );
+  // setProjects(project);
+
 }
+
+
+
 
 // return (
 //   <>
-//     <h1>Portfolio</h1>
-//     <div className="container pt-4">
-//       <ul className="list-group list-group">
-//         {projects.map((project) => (
-//           <ListItem key={project.id}>
-//             <Projects project={project} />
-//           </ListItem>
-//         ))}
-//       </ul>
+//     <div className="title-boarder rounded-circle">
+//     <h1 >Portfolio</h1>
 //     </div>
+    
+//       <div className="container p-3 justify-content-center" style={{height: "100%"}}>
+//         <div className="row ">
+//           {projects.map((project) => (
+//             <Projects key={project.id} project={project} />
+//           ))}
+//         </div>
+//       </div>
+    
 //   </>
 // );
