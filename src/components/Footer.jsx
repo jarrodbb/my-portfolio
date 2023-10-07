@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
 export default function Footer({}) {
@@ -21,6 +21,17 @@ export default function Footer({}) {
         <div className="p-2 display-4">
           <FontAwesomeIcon
             icon={faLinkedin}
+            className="icon-hover"
+          ></FontAwesomeIcon>
+        </div>
+      </a>
+      <a
+        class="icon-link"
+        href="https://stackoverflow.com/users/22700113/jayblann"
+      >
+        <div className="p-2 display-4">
+          <FontAwesomeIcon
+            icon={faStackOverflow}
             className="icon-hover"
           ></FontAwesomeIcon>
         </div>
