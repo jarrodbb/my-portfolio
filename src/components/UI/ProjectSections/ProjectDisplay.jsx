@@ -1,16 +1,21 @@
 import CardBody from "../Card/CardBody";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import CardHeader from "../Card/CardHeader";
 export default function ProfileDetailed({ project }) {
   return (
-    <div className="col-sml-12 col-lg-6 p-6 ">
+    <div className=" ">
+      <div>
+      <CardHeader name={project.name} deployedLink={project.deployedLink} />
       <CardBody
-        name={project.name}
         description={project.description}
         github={project.github}
-        deployedLink={project.deployedLink}
         projectImage={project.projectImage}
       />
     </div>
+    </div>
   );
 }
+
+
+
+{/* <div className=" d-inline-flex flex-column p-2 justify-content-around col-sml-12 col-lg-6 "> */}

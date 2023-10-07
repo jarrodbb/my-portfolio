@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Projects from "../components/UI/ProjectSections/ProjectDisplay";
 import ListItem from "../components/UI/ListItem";
 import sickieImg from "../assets/images/sickie.png";
@@ -14,7 +15,7 @@ const projects = [
     description: "Fullstack MVC application, utilising sequelize",
     github: "https://github.com/jarrodbb/patient-zero",
     deployedLink: "https://takesickies-40fabe44386a.herokuapp.com/",
-    projectImage:'' ,
+    projectImage: sickieImg,
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const projects = [
     description: "PWA with offline functionality",
     github: "https://github.com/jarrodbb/Text-Editor",
     deployedLink: "https://its-a-text-editor-6c1743480971.herokuapp.com/",
-    projectImage: '',
+    projectImage: textImg,
   },
   {
     id: 4,
@@ -39,7 +40,7 @@ const projects = [
     github: "https://github.com/jarrodbb/Note-Taker",
     deployedLink:
       "https://organise-your-life-note-taker-5a8022c9039c.herokuapp.com/",
-    projectImage: '',
+    projectImage: noteImg,
   },
   {
     id: 5,
@@ -62,27 +63,21 @@ const projects = [
 export default function PortfolioPage() {
   // const [projects, setProjects] = useState([]);
   return (
-    <>
-      <h1>Portfolio</h1>
-     <Container>
-        <ul className="list-group list-group">
-          {projects.map((project) => (
-            <ListItem key={project.id}>
-              <Projects project={project} />
-              </Container>
-          ))}
-        </ul>
+    <div className="container pt-4">
+      <div className="row gx-1 justify-content-center ">
+        {projects.map((project) => (
+          <div className="  p-2 col-sml-12 col-md-6 ">
+            <Projects key={project.id} project={project} />
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
-  // setProjects(project);
-
 }
 
-
-
-
-// return (
+// <ListItem key={project.id}>
+{
+  /* // return (
 //   <>
 //     <div className="title-boarder rounded-circle">
 //     <h1 >Portfolio</h1>
@@ -97,4 +92,5 @@ export default function PortfolioPage() {
 //       </div>
     
 //   </>
-// );
+// ); */
+}
