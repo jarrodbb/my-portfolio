@@ -1,11 +1,11 @@
 // import CardContent from "./CardContent";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./CardBody.css"
 export default function CardBody({
   
   description,
   github,
-  deployedLink,
+
   projectImage,
 }) {
   return (
@@ -13,7 +13,7 @@ export default function CardBody({
       className="card-body"
      
     >
-      <section className="ms-2 me-auto p-1 h-100"  style={{ backgroundImage: `url(${projectImage})` }}>
+      <section className="ms-2 me-auto p-1 box-image"  style={{ backgroundImage: `url(${projectImage})` }}>
         {/* <h4>{name}:</h4> */}
         <h6 className="">{description}</h6>
         <a href={github}>Github</a>

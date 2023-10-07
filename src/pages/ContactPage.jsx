@@ -133,6 +133,7 @@ export default function ContactPage() {
             label="Message"
             onChange={handleInputChange}
             type="text"
+            
             placeholder="message"
             required
           />
