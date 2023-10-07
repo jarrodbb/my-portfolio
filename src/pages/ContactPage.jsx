@@ -17,6 +17,16 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [submission, setSubmission] = useState("");
+  const [userLocation, setLocation] = useState("");
+
+  const checkClick = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+    console.log(inputType);
+    if (userLocation === "") {
+    }
+  };
 
   const handleInputChange = (e) => {
     const { target } = e;
@@ -79,14 +89,21 @@ export default function ContactPage() {
 
     setSubmission(`Thanks for your email ${name}. I'll be intouch :)`);
 
-    // alert(`Thanks for your email ${name}. I'll be intouch :)`);
-
     setName("");
     setMessage("");
     setErrorMessage("");
     setEmail("");
   };
+  const checkName = (event) => {
+    console.log(event.target.value);
+    const { target } = event;
+    const inputType = target.name;
+    const inputValue = target.value;
 
+    if (inputValue.length < 1) {
+      setErrorMessage(`${inputType} cannot be empty`);
+    }
+  };
   return (
     <div>
       <div className="title-boarder rounded-circle">
@@ -101,9 +118,11 @@ export default function ContactPage() {
             value={name}
             name="name"
             control={Input}
+            onBlur={checkName}
             onChange={handleInputChange}
             label="Name"
             type="text"
+            onClick={checkClick}
             placeholder="Name..."
             required
             icon="user circle"
@@ -115,6 +134,7 @@ export default function ContactPage() {
             value={email}
             control={Input}
             name="email"
+            onBlur={checkName}
             label="Email"
             onChange={handleInputChange}
             type="email"
@@ -124,11 +144,12 @@ export default function ContactPage() {
             iconPosition="left"
           />
 
-          <Form.Field
+          <TextArea
             id="form-textarea-control-opinion "
             rows="5"
             value={message}
-            control={Input}
+            onBlur={checkName}
+            // control={Input}
             name="message"
             label="Message"
             onChange={handleInputChange}
@@ -136,13 +157,13 @@ export default function ContactPage() {
             placeholder="message"
             required
           />
-          <button className="submit-button" type="submit ">
+          <button className="submit-button mt-2" type="submit ">
             Submit
           </button>
         </Form>
         {errorMessage && (
           <div>
-            <p className="error-text">{errorMessage}</p>
+            <p className="error-text p-2 error-display mt-2">{errorMessage}</p>
           </div>
         )}
       </div>

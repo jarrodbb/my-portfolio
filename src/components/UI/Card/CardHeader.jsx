@@ -16,7 +16,7 @@ export default function CardHeader({ name, deployedLink, github }) {
           </a>
         </div>
         <div className="p-2 display-4">
-          <a class="icon-link" href={github}>
+          <a className="icon-link" href={github}>
             <FontAwesomeIcon
               icon={faGithub}
               className="icon-hover"

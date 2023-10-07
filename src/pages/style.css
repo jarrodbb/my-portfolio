@@ -17,3 +17,15 @@ Form {
 .submit-button:hover {
   background-color: #897c80;
 }
+
+.test-style {
+  height: 110px
+
+}
+
+.error-display {
+  background-color: beige;
+  color: red;
+  font-size: 16px;
+  
+}

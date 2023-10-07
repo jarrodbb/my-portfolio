@@ -72,7 +72,7 @@ export default function PortfolioPage() {
       <div className="container pt-4">
         <div className="row gx-1 justify-content-center ">
           {projects.map((project) => (
-            <div className="  p-3 col-sml-12 col-md-6 ">
+            <div key={project.id} className="  p-3 col-sml-12 col-md-6 ">
               <Projects key={project.id} project={project} />
             </div>
           ))}

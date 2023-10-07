@@ -1,16 +1,15 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CardBody.css";
 export default function CardBody({ description, deployedLink, projectImage }) {
   return (
     <div className="card-body">
-      <div class="img__wrap">
+      <div className="img__wrap">
         <section
-          className="me-auto p-1 img__img box-image "
+          className=" p-1 img__img box-image "
           style={{ backgroundImage: `url(${projectImage})` }}
         ></section>
         <a href={deployedLink}>
-          <p class="img__description">{description}</p>{" "}
+          <p className="img__description">{description}</p>{" "}
         </a>
       </div>
     </div>
