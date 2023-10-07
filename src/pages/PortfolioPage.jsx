@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import Projects from "../components/UI/ProjectSections/ProjectDisplay";
 import ListItem from "../components/UI/ListItem";
 import sickieImg from "../assets/images/sickie.png";
-import techImg from "../assets/images/tech-blog.png";
+import techImg from "../assets/images/tech-bg.png";
 import textImg from "../assets/images/PWA.png";
 import noteImg from "../assets/images/note-taker.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const projects = [
   {
@@ -13,7 +14,7 @@ const projects = [
     description: "Fullstack MVC application, utilising sequelize",
     github: "https://github.com/jarrodbb/patient-zero",
     deployedLink: "https://takesickies-40fabe44386a.herokuapp.com/",
-    projectImage: sickieImg,
+    projectImage:'' ,
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const projects = [
     description: "PWA with offline functionality",
     github: "https://github.com/jarrodbb/Text-Editor",
     deployedLink: "https://its-a-text-editor-6c1743480971.herokuapp.com/",
-    projectImage: textImg,
+    projectImage: '',
   },
   {
     id: 4,
@@ -38,7 +39,23 @@ const projects = [
     github: "https://github.com/jarrodbb/Note-Taker",
     deployedLink:
       "https://organise-your-life-note-taker-5a8022c9039c.herokuapp.com/",
-    projectImage: noteImg,
+    projectImage: '',
+  },
+  {
+    id: 5,
+    name: "Weather Dashboard",
+    description: "API to fetch weather information",
+    github: "https://github.com/jarrodbb/weather-dashboard",
+    deployedLink: "https://jarrodbb.github.io/weather-dashboard/",
+    projectImage: "",
+  },
+  {
+    id: 6,
+    name: "Movie Buff",
+    description: "API to fetch movies",
+    github: "https://github.com/jarrodbb/Movie-buff",
+    deployedLink: "https://bemonn.github.io/Movie-buff/",
+    projectImage: "",
   },
 ];
 
@@ -48,14 +65,32 @@ export default function PortfolioPage() {
   // setProjects(project);
 
   return (
-    <div className="container pt-4">
-      <ul className="list-group list-group">
-        {projects.map((project) => (
-          <ListItem key={project.id}>
-            <Projects project={project} />
-          </ListItem>
-        ))}
-      </ul>
-    </div>
+    <>
+      <h1>Portfolio</h1>
+      
+        <div className="container p-3 justify-content-center" style={{height: "100%"}}>
+          <div className="row ">
+            {projects.map((project) => (
+              <Projects key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      
+    </>
   );
 }
+
+// return (
+//   <>
+//     <h1>Portfolio</h1>
+//     <div className="container pt-4">
+//       <ul className="list-group list-group">
+//         {projects.map((project) => (
+//           <ListItem key={project.id}>
+//             <Projects project={project} />
+//           </ListItem>
+//         ))}
+//       </ul>
+//     </div>
+//   </>
+// );
