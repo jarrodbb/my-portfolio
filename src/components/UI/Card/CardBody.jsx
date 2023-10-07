@@ -4,15 +4,15 @@ import "./CardBody.css";
 export default function CardBody({ description, deployedLink, projectImage }) {
   return (
     <div className="card-body">
-      
-        <div class="img__wrap ">
-        <section className="me-auto p-1 img__img box-image " style={{ backgroundImage: `url(${projectImage})` }}></section>
-          <a href={deployedLink}>
-            <p class="img__description">{description}</p>{" "}
-          </a>
-          
-        </div>
-     
+      <div class="img__wrap">
+        <section
+          className="me-auto p-1 img__img box-image "
+          style={{ backgroundImage: `url(${projectImage})` }}
+        ></section>
+        <a href={deployedLink}>
+          <p class="img__description">{description}</p>{" "}
+        </a>
+      </div>
     </div>
   );
 }
@@ -34,8 +34,7 @@ export default function CardBody({ description, deployedLink, projectImage }) {
 //   </div>
 // );
 
-
-// 2nd method 
+// 2nd method
 // return (
 //   <div className="card-body">
 //     <section className="me-auto p-1  ">
