@@ -5,6 +5,7 @@
 
 .test-font { 
     font-family: 'Bebas Neue', sans-serif;
+    background-color: antiquewhite;
 }
 
 .nav-pills > li > a.active {
@@ -18,6 +19,7 @@
 .nav-pills > li > a:hover {
   color: black !important;
   font-weight: 300;
+  font-weight: bold;
 }
 
 .nav-link-color {

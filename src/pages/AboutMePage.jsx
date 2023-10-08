@@ -10,17 +10,17 @@ export default function AboutMePage() {
       <div className="container">
         <div className="card">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 p-0">
               <img className="img-fluid rounded-start" src={jarrodB} />
             </div>
             <div className="col-md-8 about-me-background">
               <div className="card-body">
-                <h3 className="card-title ">Jarrod Blanning</h3>
+                <h2 className="card-title ">Jarrod Blanning</h2>
                 <p className="card-text pt-3">
                   I'm local to the Gold Coast in Queensland and currently run a
                   micro brewery called Lost Palms. My knowledge of coding is
                   improving everyday with experience gathered from doing diverse
-                  projects that challenge my front-end and back-end abbilities
+                  projects that challenge my front-end and back-end abilities
                   <br ></br>
                   <br ></br>
                   The plan is to improve to a level where it becomes usable for
