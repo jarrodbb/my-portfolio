@@ -30,7 +30,7 @@ The application provides the user with the ability to navigate to the following 
 
 ### Deployed Link
 
-[My-Portfolio](https://main--reliable-alfajores-52574e.netlify.app/)
+[My-Portfolio](https://jarrod-blanning-portfolio.netlify.app/)
 
 ### Note:
 
