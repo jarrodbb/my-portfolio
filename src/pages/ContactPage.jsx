@@ -35,7 +35,7 @@ export default function ContactPage() {
 
     if (inputType === "email") {
       if (inputValue === "") {
-        return setErrorMessage("cannot be empty");
+        return setErrorMessage("cannot be empty"), setEmail("");
       } else {
         setEmail(inputValue);
       }
