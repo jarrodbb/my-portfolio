@@ -1,7 +1,12 @@
+//Import fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//Import icon
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+//Import CSS
 import "./CardHeader.css";
 
+//Function to handle the cardheader contents 
+//Props passed from parent. 
 export default function CardHeader({ name, deployedLink, github }) {
   return (
     <div className="container title-for-card  ">

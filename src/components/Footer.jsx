@@ -1,5 +1,6 @@
+//Import Font awesome for icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+//Import specific icons
 import {
   faGithub,
   faLinkedin,
@@ -7,6 +8,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
+//Function to handle the footer contents 
+//Links added to icons 
 export default function Footer() {
   return (
     <div className="d-flex justify-content-center w-auto h-auto p-3">

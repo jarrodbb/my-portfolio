@@ -1,5 +1,9 @@
+//Import resume 
 import resume from "../assets/pdf/resume.pdf";
+//Import CSS for specific page styling
 import "./Resume.css"
+
+//Function to return the resume page
 
 export default function ResumePage() {
   return (

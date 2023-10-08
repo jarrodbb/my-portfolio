@@ -1,6 +1,9 @@
+//Import beautiful image of myself
 import jarrodB from "../assets/images/J_Blanning.jpg";
+//import specific css
 import "./AboutMe.css";
 
+//Function to handle the contents of the About Me page
 export default function AboutMePage() {
   return (
     <div>

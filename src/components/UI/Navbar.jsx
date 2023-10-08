@@ -1,3 +1,4 @@
+//Function to handle the navbar contents
 export default function Nav({ links }) {
   return (
     <nav className="navbar navbar-expand-lg bg-secondary">

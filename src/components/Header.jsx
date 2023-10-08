@@ -1,5 +1,6 @@
-
+//import css for header
 import "./Header.css";
+//function to handle the header contents
 export default function Header() {
     return (
       <div>

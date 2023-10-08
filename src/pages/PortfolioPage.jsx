@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+//Import Projects
 import Projects from "../components/UI/ProjectSections/ProjectDisplay";
-import ListItem from "../components/UI/ListItem";
+//Import Images
 import sickieImg from "../assets/images/sickie.png";
 import techImg from "../assets/images/tech-blog.png";
 import textImg from "../assets/images/PWA.png";
 import noteImg from "../assets/images/note-taker.png";
 import movieImg from "../assets/images/movie.png";
 import weatherImg from "../assets/images/weather.png";
+//Import bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//Define projects
 const projects = [
   {
     id: 1,
@@ -62,8 +63,10 @@ const projects = [
   },
 ];
 
+//Define function to return portfolio page
+//Each project is mapped and and returns a card displaying the projects information
 export default function PortfolioPage() {
-  // const [projects, setProjects] = useState([]);
+ 
   return (
     <>
       <div className="title-boarder rounded-circle">
@@ -80,24 +83,4 @@ export default function PortfolioPage() {
       </div>
     </>
   );
-}
-
-// <ListItem key={project.id}>
-{
-  /* // return (
-//   <>
-//     <div className="title-boarder rounded-circle">
-//     <h1 >Portfolio</h1>
-//     </div>
-    
-//       <div className="container p-3 justify-content-center" style={{height: "100%"}}>
-//         <div className="row ">
-//           {projects.map((project) => (
-//             <Projects key={project.id} project={project} />
-//           ))}
-//         </div>
-//       </div>
-    
-//   </>
-// ); */
 }
