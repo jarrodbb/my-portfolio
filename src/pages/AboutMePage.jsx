@@ -1,4 +1,4 @@
-import jarrodB from "../assets/images/J_blanning.jpg";
+import jarrodB from "../assets/images/J_Blanning.jpg";
 import "./AboutMe.css";
 
 export default function AboutMePage() {
