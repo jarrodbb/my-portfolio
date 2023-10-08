@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
-export default function Footer({}) {
+export default function Footer() {
   return (
     <div className="d-flex justify-content-center w-auto h-auto p-3">
       <div className="p-2 display-4">
